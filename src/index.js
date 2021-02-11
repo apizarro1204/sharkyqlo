@@ -14,6 +14,11 @@ app.set('view engine', 'ejs');
 // routes
 app.use(require('./routes/index.js'));
 
+// connection to the server
+mongoose.connect('mongodb+srv://sharkiOrx:darbeta12@cluster0.v7wdw.mongodb.net/<dbname>?retryWrites=true&w=majority')
+.then(db => console.log('db connected'))
+.catcher(err => console.log(err));
+
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
