@@ -15,6 +15,9 @@ app.set('view engine', 'ejs');
 app.use(require('./routes/index.js'));
 
 // connection to the server
+mongoose.connect('mongodb+srv://sharkiOrx:darbeta12@cluster0.v7wdw.mongodb.net/firstpagesharki?retryWrites=true&w=majority')
+.then(db => console.log('db connected'))
+.catcher(err => console.log(err));
 
 
 // static files
