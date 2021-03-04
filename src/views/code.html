@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
+    <title>Codigo</title>
     <%- include('partials/head.html'); -%>
+
 
 </head>
 
@@ -22,19 +21,15 @@
                 <div class="col-md-4 offset-md-4">
                     <div class="card animate__animated animate__lightSpeedInLeft">
                         <div class="card-header bg-dark text-white text-center">
-                            <h3>Contact Me</h3>
+                            <h3>Ingresa Código</h3>
                         </div>
                         <div class="card-body">
-                            <form action="">
+                            <form action="http://localhost:3000/cargaImagen" method="POST" >
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="form-goup">
-                                    <textarea class="form-control" name="" id="" cols="30" rows="10"
-                                        placeholder="Message"></textarea>
+                                    <input name='codigo' type="text" class="form-control" maxlength="8" placeholder="Ingresa código">
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary btn-block"> 
+                                    <button type="submit" class="btn btn-primary btn-block">
                                         Send Message
                                     </button>
                                 </div>
@@ -49,6 +44,7 @@
         </div>
 
         <%- include ('partials/footer.html') -%>
+
 
 
 </body>
