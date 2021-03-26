@@ -30,7 +30,7 @@ function cargarData(req, res) {
           let info = transporter.sendMail({
             from: "'Solicitud de canje' <solicitudcupon@gmail.com>", 
             to: "sherked3@gmail.com", 
-            subject: "Hello", 
+            subject: "Test Prueba", 
             text: result, 
             html: "<b>Se ha enviado un canje con el código </b>" + result, 
           });
